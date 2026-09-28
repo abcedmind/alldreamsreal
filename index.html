@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>alldreamsreal</title>
+<meta name="description" content="All Dreams Real, LLC. Interventionist art collective and AI-enabled micro research lab, Memphis. Every drop comes with a manifesto.">
+<meta property="og:title" content="alldreamsreal">
+<meta property="og:description" content="Every drop comes with a manifesto.">
+<meta property="og:image" content="https://abcedmind.github.io/alldreamsreal/assets/LOCKED.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --newsprint:#eceee7; --undyed:#f7f8f4; --ink:#1b1e22; --iron:#6b6e6a; --indigo:#2b3a67; --rule:#cfd3c9;
+  --s1:4px; --s2:8px; --s3:12px; --s4:20px; --s5:32px; --s6:52px;
+  --col:64ch;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--newsprint);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--indigo);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,.strip:focus-visible{outline:2px solid var(--indigo);outline-offset:3px}
+.mono{font:400 12px/1.5 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--iron)}
+.col{max-width:var(--col);margin:0 auto;padding:0 16px}
+
+/* top bar: the mark, and the sound control (it shows itself only when the instrumental is on the server) */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding-top:var(--s4)}
+.mark{font:400 20px/1 "Instrument Serif",serif;letter-spacing:.01em;color:inherit;text-decoration:none}
+.sound{font:500 11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);background:none;border:1px solid var(--rule);padding:var(--s2) var(--s3);cursor:pointer}
+.sound:hover{border-color:var(--ink)}
+
+header.top{padding-top:var(--s6);display:grid;gap:var(--s4)}
+h1{margin:0;font:400 clamp(34px,7vw,52px)/1.04 "Instrument Serif",serif;letter-spacing:-.01em;text-wrap:balance}
+h1 em{color:var(--indigo)}
+.lede{margin:0;max-width:56ch}
+section{padding-top:var(--s6)}
+h2{margin:0 0 var(--s3);font:400 32px/1.1 "Instrument Serif",serif}
+.intro{margin:0 0 var(--s4)}
+
+/* the drop strip: scrolls sideways inside its own box; the page never does */
+.hint{display:flex;justify-content:flex-end;max-width:var(--col);margin:0 auto;padding:0 16px}
+.strip{margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(248px,300px);gap:var(--s4);
+  overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+  --edge:calc(max(0px,(100% - var(--col))/2) + 16px);
+  padding:var(--s2) var(--edge) var(--s4);
+  scroll-padding-inline:var(--edge)}
+.strip>li{list-style:none;scroll-snap-align:start;display:grid}
+
+/* a tile is two things: the work's image and the work's name */
+.tile{display:grid;gap:var(--s2);align-content:start;color:inherit;text-decoration:none}
+.tile .name{margin:0;font:400 24px/1.1 "Instrument Serif",serif}
+.tile:hover .name,.tile:focus-visible .name{text-decoration:underline;text-decoration-thickness:1px}
+.tile .num{margin:0}
+
+.plate{position:relative;aspect-ratio:4/3;background:var(--ink);overflow:hidden;display:grid;place-items:center}
+.plate img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.plate.work img{object-fit:contain}
+/* locked: LOCKED.jpg fills the plate. When a hint image for the drop exists it goes underneath
+   (img.hint) and the lock is superimposed over it at .82 opacity. */
+.plate.locked img{object-fit:cover}
+.plate.locked img.hint + img.lock{opacity:.82}
+/* no image: the NO IMAGE mark (ink, heavy face). When assets/no-image.jpg is added it covers the mark. */
+.plate.none b{font:600 15px/1 "IBM Plex Sans",system-ui,sans-serif;letter-spacing:.16em;color:var(--newsprint)}
+.plate.none::after{content:"";position:absolute;inset:0;background:url(assets/no-image.jpg) center/cover no-repeat}
+
+.lines{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin:0;padding:0;list-style:none;font:400 24px/1.2 "Instrument Serif",serif}
+.lines a{color:inherit}
+
+footer{padding:var(--s6) 0}
+footer .col{display:grid;gap:var(--s2);border-top:1px solid var(--rule);padding-top:var(--s4)}
+footer p{margin:0}
+</style>
+</head>
+<body>
+
+<div class="col bar">
+  <a class="mark" href="index.html">alldreamsreal</a>
+  <button class="sound" id="sound" type="button" hidden>Play sound</button>
+</div>
+
+<header class="top col">
+  <h1>How can we use this <em>equal and opposite disruptive force</em> to create a better future than our current trajectory?</h1>
+  <p class="lede">All Dreams Real, LLC. An interventionist art collective. An AI-enabled micro research lab. An agency, in more ways than one. A creator of Situations. Under alldreamsreal is everything I do.</p>
+</header>
+
+<main>
+  <section aria-labelledby="drops-h">
+    <div class="col">
+      <h2 id="drops-h">Drops</h2>
+      <p class="intro">Each drop comes with a manifesto. A drop keeps being iterated on after it ships: by us, by the public, and by itself.</p>
+    </div>
+    <div class="hint"><span class="mono" aria-hidden="true">Scroll &rarr;</span></div>
+    <ol class="strip" tabindex="0" aria-label="Drops, in order; the list scrolls sideways">
+      <li><a class="tile" href="https://finnegans-wake-interactive.vercel.app">
+        <div class="plate none" role="img" aria-label="No image"><b>NO IMAGE</b></div>
+        <p class="num mono">Drop 01 &middot; preview</p>
+        <h3 class="name">Finnegans Wake Interactive</h3>
+      </a></li>
+      <li><a class="tile" href="https://longest-season.vercel.app">
+        <div class="plate none" role="img" aria-label="No image"><b>NO IMAGE</b></div>
+        <p class="num mono">Drop 02 &middot; preview</p>
+        <h3 class="name">Longest Season</h3>
+      </a></li>
+      <li><a class="tile" href="https://delta-dividend.vercel.app">
+        <div class="plate work"><img src="assets/works/delta-dividend.webp" alt="" width="1200" height="630" loading="lazy"></div>
+        <p class="num mono">Drop 03 &middot; preview</p>
+        <h3 class="name">The Delta Dividend</h3>
+      </a></li>
+      <li><a class="tile" href="https://memphis-resource-guide.vercel.app">
+        <div class="plate work"><img src="assets/works/memphis-resource-guide.webp" alt="" width="1200" height="630" loading="lazy"></div>
+        <p class="num mono">Drop 04 &middot; preview</p>
+        <h3 class="name">Memphis Family Resource Guide</h3>
+      </a></li>
+      <li><a class="tile" href="404.html">
+        <div class="plate locked" role="img" aria-label="Locked"><img class="lock" src="assets/LOCKED.jpg" alt="" width="500" height="500" loading="lazy"></div>
+        <p class="num mono">Drop 05 &middot; coming</p>
+        <h3 class="name">Blue Suede Shoes</h3>
+      </a></li>
+      <li><a class="tile" href="404.html">
+        <div class="plate locked" role="img" aria-label="Locked"><img class="lock" src="assets/LOCKED.jpg" alt="" width="500" height="500" loading="lazy"></div>
+        <p class="num mono">Drop 06 &middot; coming</p>
+        <h3 class="name">Out of My Body</h3>
+      </a></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="lines-h">
+    <div class="col">
+      <h2 id="lines-h">Lines</h2>
+      <ul class="lines">
+        <li><a href="https://brand-name.co">Brand Name</a></li>
+        <li>Blue Suede Shoes</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="col">
+    <p class="mono">All Dreams Real, LLC &middot; Memphis, Tennessee</p>
+    <p><a href="mailto:brandnameluxuryclothing@gmail.com">brandnameluxuryclothing@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+/* Background instrumental. Off until the visitor presses the button. The button stays hidden unless
+   assets/adr-instrumental.mp3 answers on the server, so a missing file shows nothing at all. */
+(function () {
+  var btn = document.getElementById('sound');
+  var src = 'assets/adr-instrumental.mp3';
+  var audio = null;
+  if (!btn || !window.fetch) return;
+  fetch(src, { method: 'HEAD' }).then(function (r) {
+    var type = r.headers.get('content-type') || '';
+    if (r.ok && type.indexOf('text/html') === -1) btn.hidden = false;
+  }).catch(function () {});
+  btn.addEventListener('click', function () {
+    if (!audio) {
+      audio = new Audio(src);
+      audio.loop = true;
+      audio.addEventListener('error', function () { btn.remove(); });
+    }
+    if (audio.paused) {
+      audio.play().then(function () { btn.textContent = 'Pause sound'; }).catch(function () {});
+    } else {
+      audio.pause();
+      btn.textContent = 'Play sound';
+    }
+  });
+})();
+</script>
+</body>
+</html>

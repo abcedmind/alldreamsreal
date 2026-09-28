@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* GitHub Pages serves this file at any missing path, so relative URLs must resolve from the site root:
+   /alldreamsreal/ while the site lives under a user domain, / once it has its own domain. */
+(function () {
+  if (location.protocol.indexOf('http') !== 0) return;
+  var base = location.pathname.indexOf('/alldreamsreal/') === 0 ? '/alldreamsreal/' : '/';
+  var el = document.createElement('base');
+  el.href = base;
+  document.head.prepend(el);
+})();
+</script>
+<title>page unavailable</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400&family=Instrument+Serif&display=swap">
+<style>
+:root{--ink:#1b1e22;--newsprint:#eceee7;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;min-height:100svh;background:var(--ink);color:#fff;display:grid;place-items:center;overflow:hidden}
+.art{position:relative;height:100vh;height:100svh;width:min(100%, calc(100vh * .714));width:min(100%, calc(100svh * .714))}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.mark{position:fixed;top:20px;left:16px;font:400 20px/1 "Instrument Serif",serif;color:var(--newsprint);text-decoration:none;z-index:2}
+.mark:focus-visible{outline:2px solid var(--newsprint);outline-offset:3px}
+/* PAGE UNAVAILABLE: wide, spaced, no punctuation. Syncopate stands in for the Solarflare lettering. */
+h1{position:fixed;left:0;right:0;bottom:18vh;bottom:18svh;margin:0;z-index:1;text-align:center;
+  font:400 clamp(17px,4.6vw,54px)/1.5 "Syncopate",sans-serif;letter-spacing:.55em;text-transform:uppercase;
+  text-shadow:-2px 0 rgba(255,64,214,.7),2px 0 rgba(64,236,255,.7),0 0 22px rgba(24,8,64,.55)}
+h1 span{display:block;padding-left:.55em}
+</style>
+</head>
+<body>
+<a class="mark" href="index.html">alldreamsreal</a>
+<div class="art" aria-hidden="true">
+  <picture>
+    <source srcset="assets/page-unavailable.avif" type="image/avif">
+    <img src="assets/page-unavailable.jpg" alt="" width="857" height="1200">
+  </picture>
+</div>
+<h1><span>Page</span> <span>Unavailable</span></h1>
+</body>
+</html>
