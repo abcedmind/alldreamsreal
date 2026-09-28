@@ -65,9 +65,11 @@ h2{margin:0 0 var(--s3);font:400 32px/1.1 "Instrument Serif",serif}
    (img.hint) and the lock is superimposed over it at .82 opacity. */
 .plate.locked img{object-fit:cover}
 .plate.locked img.hint + img.lock{opacity:.82}
-/* no image: the NO IMAGE mark (ink, heavy face). When assets/no-image.jpg is added it covers the mark. */
-.plate.none b{font:600 15px/1 "IBM Plex Sans",system-ui,sans-serif;letter-spacing:.16em;color:var(--newsprint)}
-.plate.none::after{content:"";position:absolute;inset:0;background:url(assets/no-image.jpg) center/cover no-repeat}
+/* no image: Z's NO IMAGE mark, a crossed-out circle with NO IMAGE under it (Z, 2026-09-28: "its just a
+   crossed out circle with NO IMAGE under it"). Drawn inline, so no image file is requested. */
+.plate.none .mark{display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--newsprint)}
+.plate.none svg{width:76px;height:76px;display:block}
+.plate.none b{font:600 15px/1 "IBM Plex Sans",system-ui,sans-serif;letter-spacing:.16em}
 
 .lines{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin:0;padding:0;list-style:none;font:400 24px/1.2 "Instrument Serif",serif}
 .lines a{color:inherit}
@@ -98,12 +100,12 @@ footer p{margin:0}
     <div class="hint"><span class="mono" aria-hidden="true">Scroll &rarr;</span></div>
     <ol class="strip" tabindex="0" aria-label="Drops, in order; the list scrolls sideways">
       <li><a class="tile" href="https://finnegans-wake-interactive.vercel.app">
-        <div class="plate none" role="img" aria-label="No image"><b>NO IMAGE</b></div>
+        <div class="plate none" role="img" aria-label="No image"><span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="5"/><line x1="20.3" y1="20.3" x2="79.7" y2="79.7" stroke="currentColor" stroke-width="5" stroke-linecap="butt"/></svg><b>NO IMAGE</b></span></div>
         <p class="num mono">Drop 01 &middot; preview</p>
         <h3 class="name">Finnegans Wake Interactive</h3>
       </a></li>
       <li><a class="tile" href="https://longest-season.vercel.app">
-        <div class="plate none" role="img" aria-label="No image"><b>NO IMAGE</b></div>
+        <div class="plate none" role="img" aria-label="No image"><span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="5"/><line x1="20.3" y1="20.3" x2="79.7" y2="79.7" stroke="currentColor" stroke-width="5" stroke-linecap="butt"/></svg><b>NO IMAGE</b></span></div>
         <p class="num mono">Drop 02 &middot; preview</p>
         <h3 class="name">Longest Season</h3>
       </a></li>
