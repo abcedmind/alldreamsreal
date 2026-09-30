@@ -1,0 +1,29 @@
+/* alldreamsreal design tokens: the one block of CSS variables for this site.
+   Rule: a page takes every colour, typeface, size and space from here, as var(--…), and
+   nothing else. A page that writes a raw colour or an off-scale space fails the design check. */
+:root{
+  /* colour: five, each named for a material (standards rule 4) */
+  --newsprint:#eceee7;   /* ground */
+  --undyed:#f7f8f4;      /* raised ground: a card, a label */
+  --ink:#1b1e22;         /* text, the dark plate */
+  --iron:#6b6e6a;        /* secondary text, mono lines */
+  --indigo:#2b3a67;      /* the one loud colour: links, the emphasised phrase, focus. Nothing decorative */
+  /* derived, not a sixth colour: a hairline mixed from ink and ground */
+  --rule:color-mix(in srgb, var(--ink) 14%, var(--newsprint));
+
+  /* type: three faces (standards rule 3) */
+  --display:"Instrument Serif",Georgia,serif;          /* the one line that carries the idea; tile names */
+  --text:"IBM Plex Sans",system-ui,sans-serif;          /* reading */
+  --mono:"IBM Plex Mono",ui-monospace,monospace;        /* numbers, dates, labels, uppercase */
+  --t-mono:12px; --t-body:16px; --t-name:24px; --t-h2:32px; --t-h1:clamp(34px,7vw,52px);
+
+  /* space: one scale (standards rule 5) */
+  --s1:4px; --s2:8px; --s3:12px; --s4:20px; --s5:32px; --s6:52px;
+  --gutter:16px;
+  --col:64ch;
+
+  /* motion: the reader drives it (standards rule 9) */
+  --cut:120ms;
+
+  color-scheme:light;
+}

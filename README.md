@@ -11,8 +11,8 @@ It is served by GitHub Pages from `main`, at the root.
 ## Pointing alldreamsreal.studio here (Name.com)
 
 0. Do this first. On GitHub, open account Settings → Pages → Add a domain, and enter `alldreamsreal.studio`. Add the TXT record GitHub shows (host `_github-pages-challenge-abcedmind`) at Name.com, then press Verify. A verified domain cannot be claimed by another account while its DNS points at GitHub.
-1. Go to Name.com, open alldreamsreal.studio, then its DNS records. Delete the parking record and any default `*` or `www` record.
-2. Add these records:
+1. Go to Name.com: MY DOMAINS → alldreamsreal.studio → Manage DNS Records. Delete the parking records and any default `*` or `www` record. Do not add a `*` (wildcard) record: GitHub warns that wildcards put the domain at risk of takeover.
+2. Add these records. At Name.com the root domain's **Host field is left blank** (the `@` below means "blank"). TTL stays at the default, 300.
 
 | Type | Host | Answer |
 |---|---|---|
