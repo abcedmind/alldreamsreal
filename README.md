@@ -4,6 +4,7 @@ This is the website of All Dreams Real, LLC, in Memphis, Tennessee. It is plain 
 
 - `index.html` is the page: every drop, shown as its image and its name.
 - `404.html` is the PAGE UNAVAILABLE page. GitHub Pages serves it at any address that does not exist.
+- `brands/` holds one page per line (`brands/<slug>/index.html`) and an index of the lines (`brands/index.html`). Each page links its pieces to brand-name.co, where checkout runs; customer service is brand-name.co's contact form.
 - `assets/` holds the images. Each work's tile uses that work's own preview image. The instrumental (`assets/adr-instrumental.mp3`) is optional: the page shows its sound button only when the file is present.
 
 It is served by GitHub Pages from `main`, at the root.
