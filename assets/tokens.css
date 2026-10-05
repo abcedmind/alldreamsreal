@@ -6,7 +6,7 @@
   --newsprint:#eceee7;   /* ground */
   --undyed:#f7f8f4;      /* raised ground: a card, a label */
   --ink:#1b1e22;         /* text, the dark plate */
-  --iron:#6b6e6a;        /* secondary text, mono lines */
+  --iron:#686b67;        /* secondary text, mono lines */
   --indigo:#2b3a67;      /* the one loud colour: links, the emphasised phrase, focus. Nothing decorative */
   /* derived, not a sixth colour: a hairline mixed from ink and ground */
   --rule:color-mix(in srgb, var(--ink) 14%, var(--newsprint));
