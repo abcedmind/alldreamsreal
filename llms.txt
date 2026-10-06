@@ -1,0 +1,31 @@
+# alldreamsreal
+
+> All Dreams Real is an interventionist art collective and AI-enabled micro research lab in Memphis, Tennessee. Its site shows each "drop", a project that ships with a manifesto and keeps being iterated on after it ships, and the seven clothing and home lines whose shelves live on brand-name.co. The drops shown are Finnegans Wake Interactive, Longest Season, The Delta Dividend and the Memphis Family Resource Guide (previews), with Blue Suede Shoes and Out of My Body listed as coming. Checkout, shipping and customer service for the lines run on brand-name.co, not here.
+
+Contact: brandnameluxuryclothing@gmail.com. For orders, sizing and returns, use the contact form at https://brand-name.co/pages/contact and name the line in the message.
+
+For agents: the site's data is read-only for agents unless a page says otherwise. The site is static pages with no forms or accounts; orders happen on brand-name.co.
+
+## Pages
+
+- [Home](https://alldreamsreal.studio/): what All Dreams Real is, and the strip of drops, each shown as an image and a name.
+- [Lines](https://alldreamsreal.studio/brands/): the seven lines under All Dreams Real, each a shelf on brand-name.co.
+- [Blue Suede Shoes](https://alldreamsreal.studio/brands/blue-suede-shoes/): handcrafted in Italy, designed in Memphis; calfskin shoes and sneakers made to order, and a deadstock Italian military chore jacket.
+- [Universal Basic Swagger](https://alldreamsreal.studio/brands/universal-basic-swagger/): undyed, organic, natural-fibre basics worn against the skin: T-shirts, a sweatshirt and a hoodie.
+- [Beanie Bar](https://alldreamsreal.studio/brands/beanie-bar/): headwear only, every fibre natural: cotton, hemp, silk, wool, cashmere.
+- [Surplus Archive](https://alldreamsreal.studio/brands/surplus-archive/): deadstock European military and workwear; already made, so buying it orders nothing new.
+- [Delta Mud](https://alldreamsreal.studio/brands/delta-mud/): organic cotton dyed with Mississippi Delta mud; every piece one of a kind. First pieces are coming.
+- [BN Home](https://alldreamsreal.studio/brands/bn-home/): no plastic at home: wood, bristle, beeswax, sea sponge, linen, cast iron. First pieces are coming.
+- [Japanese shirting](https://alldreamsreal.studio/brands/awa/): Awa-shijira cotton from Tokushima, in gingham, stripe and chambray shirts, haori and coverall jackets, stoles and furoshiki. First pieces are coming.
+
+## Drops
+
+- [Finnegans Wake Interactive](https://finnegans-wake-interactive.vercel.app): an annotated web edition of Joyce's night-book.
+- [Longest Season](https://longest-season.vercel.app): an endless generative sound environment in the vocabulary of Fishmans.
+- [The Delta Dividend](https://delta-dividend.vercel.app): a policy proposal for community compute sharing around Memphis's data centres.
+- [Memphis Family Resource Guide](https://memphis-resource-guide.vercel.app): free programs for children and families in Shelby County.
+
+## Optional
+
+- [brand-name.co](https://brand-name.co): where the lines are sold and where checkout and customer service run.
+- [Source code](https://github.com/abcedmind/alldreamsreal): the static site.
